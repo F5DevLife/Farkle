@@ -83,6 +83,7 @@ function resetDice() {
         item.classList.remove("held");
         if (container2_div.contains(item)) container1_div.append(item);
     });
+    rollDice();
     updateScore();
 }
 
