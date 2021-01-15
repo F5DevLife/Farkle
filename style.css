@@ -1,0 +1,57 @@
+body {
+  background-color: darkgray;
+  user-select: none;
+}
+#game_container {
+  box-shadow: 0.5px 0.5px 2.5px black, 
+    -0.5px -0.5px 2.5px black;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  margin: 25px;
+}
+.dice-container {
+  background-color: gray;
+  display: flex;
+  height: 50px;
+  width: 200px;
+  padding: 2px;
+  margin: auto;
+  margin-bottom: 5px;
+  box-shadow: 0 0 5px black inset;
+  }
+.dice {
+  background-color: white;
+  //border: solid black 1.5px;
+  box-shadow: 0.5px 0.5px 5px black, 
+    -0.5px -0.5px 5px black;
+  height: 25px;
+  width: 25px;
+  padding: .5px;
+  margin: auto 7px;
+  transition: .25s ease;
+}
+.dice.held {
+  //border-color: red;
+  box-shadow: .75px .75px 7.5px black, 
+    -.75px -.75px 7.5px black;
+  transform: scale(1.1);
+  //background-color: lightgray;
+  //font-weight: bold;
+  //color: red;
+  transition: .25s ease;
+}
+.scorebox {
+  margin-bottom: 5px;
+}
+.button_container {
+  
+}
+button {
+  margin: 0 1px;
+  box-shadow: 0.25px 0.25px 5px black, 
+    -0.25px -0.25px 5px black;
+}
+button:active {
+  transform: scale(0.95);
+}
