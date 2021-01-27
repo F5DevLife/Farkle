@@ -42,9 +42,8 @@ rollDice();
 
 //roll dice
 function rollDice() {
-    // TODO:  Leave out dice that are in the second container.
     dice_set.forEach((item) => {
-        if (!item.classList.contains("held")) {
+        if (!item.classList.contains("held") && container1_div.contains(item)) {
             item.value = Math.ceil(Math.random() * 6);
             item.textContent = item.value;
         }
