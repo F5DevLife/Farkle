@@ -65,11 +65,12 @@ function holdDice(item) {
 // }
 
 //add up dice/score
-//TODO:  Keep score with dice in container 2
 function updateScore() {
     score = 0;
     dice_set.forEach((item) => {
-        if (item.classList.contains("held")) score += item.value;
+        if (item.classList.contains("held") || container2_div.contains(item)) {
+            score += item.value;
+        }
     });
     score_display.textContent = score;
 }
@@ -81,6 +82,7 @@ function resetDice() {
         item.classList.remove("held");
         if (container2_div.contains(item)) container1_div.append(item);
     });
+    score = 0;
     rollDice();
     updateScore();
 }
