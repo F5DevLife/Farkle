@@ -17,9 +17,6 @@ const submit_btn = document.getElementById("submit");
 
 roll_btn.addEventListener("click", () => {
     rollDice();
-    //for (let i = 0; i < 2000; i++) {
-    //setTimeout(rollDice, 50);
-    //}
 });
 reset_btn.addEventListener("click", () => {
     resetDice();
@@ -58,16 +55,17 @@ function holdDice(item) {
     item.classList.toggle("held");
 }
 
-//sort dice
-function sortDice(item) {
-    if (item.classList.contains("held")) {
-        dice_container.insertBefore(item, dice_container.firstChild);
-    } else {
-        dice_container.appendChild(item);
-    }
-}
+// //sort dice
+// function sortDice(item) {
+//     if (item.classList.contains("held")) {
+//         dice_container.insertBefore(item, dice_container.firstChild);
+//     } else {
+//         dice_container.appendChild(item);
+//     }
+// }
 
 //add up dice/score
+//TODO:  Keep score with dice in container 2
 function updateScore() {
     score = 0;
     dice_set.forEach((item) => {
@@ -78,6 +76,7 @@ function updateScore() {
 
 //reset dice
 function resetDice() {
+
     dice_set.forEach((item) => {
         item.classList.remove("held");
         if (container2_div.contains(item)) container1_div.append(item);
