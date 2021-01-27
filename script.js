@@ -52,7 +52,9 @@ function displayDice() { }
 
 //hold dice
 function holdDice(item) {
-    item.classList.toggle("held");
+    if (container1_div.contains(item)) {
+        item.classList.toggle("held");
+    }
 }
 
 // //sort dice
