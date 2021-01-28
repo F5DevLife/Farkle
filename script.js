@@ -1,3 +1,5 @@
+//script.js
+
 import * as scoring from "/scoring.js"
 
 var d1 = document.getElementById("d1");
@@ -8,10 +10,10 @@ var d5 = document.getElementById("d5");
 //var d6 = document.getElementById("d6");
 
 var container1_div = document.querySelector("#dice-container-1");
-var container2_div = document.querySelector("#dice-container-2");
+export var container2_div = document.querySelector("#dice-container-2");
 const score_display = document.getElementById("score_display");
 var score = 0;
-const dice_set = [d1, d2, d3, d4, d5];
+export const dice_set = [d1, d2, d3, d4, d5];
 const dice_container = document.getElementById("dice-container");
 
 const roll_btn = document.getElementById("roll");
@@ -29,7 +31,7 @@ dice_set.forEach((item) => {
     item.addEventListener("click", () => {
         holdDice(item);
         //sortDice(item);
-        updateScore();
+        scoring.updateScore();
     });
     item.value = parseInt(item.innerText);
 });
@@ -69,17 +71,6 @@ function holdDice(item) {
 //     }
 // }
 
-//add up dice/score
-function updateScore() {
-    score = 0;
-    dice_set.forEach((item) => {
-        if (item.classList.contains("held") || container2_div.contains(item)) {
-            score += item.value;
-        }
-    });
-    score_display.textContent = score;
-}
-
 //reset dice
 function resetDice() {
 
@@ -89,10 +80,9 @@ function resetDice() {
     });
     score = 0;
     rollDice();
-    updateScore();
+    scoring.updateScore();
 }
 
-function checkDice() { }
 
 function submit() {
     dice_set.forEach((item) => {
