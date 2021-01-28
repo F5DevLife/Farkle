@@ -3,12 +3,13 @@ var d2 = document.getElementById("d2");
 var d3 = document.getElementById("d3");
 var d4 = document.getElementById("d4");
 var d5 = document.getElementById("d5");
+var d6 = document.getElementById("d6");
 
 var container1_div = document.querySelector("#dice-container-1");
 var container2_div = document.querySelector("#dice-container-2");
 const score_display = document.getElementById("score_display");
 var score = 0;
-const dice_set = [d1, d2, d3, d4, d5];
+const dice_set = [d1, d2, d3, d4, d5, d6];
 const dice_container = document.getElementById("dice-container");
 
 const roll_btn = document.getElementById("roll");
