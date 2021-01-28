@@ -1,3 +1,5 @@
+import * as scoring from "/scoring.js"
+
 var d1 = document.getElementById("d1");
 var d2 = document.getElementById("d2");
 var d3 = document.getElementById("d3");
